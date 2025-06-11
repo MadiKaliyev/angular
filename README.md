@@ -1,6 +1,9 @@
 # Angular Route Table
 
-![CI](https://github.com/MadiKaliyev/angular/actions/workflows/test.yml/badge.svg)
+[![Run Angular Unit Tests](https://github.com/MadiKaliyev/angular/actions/workflows/test.yml/badge.svg)](https://github.com/MadiKaliyev/angular/actions/workflows/test.yml)
+
+Профессиональный Angular-проект с юнит-тестами и CI/CD.
+
 
 Проект маршрутов с таблицей и сортировкой IP и строк.  
 ...
