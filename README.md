@@ -1,3 +1,10 @@
+# Angular Route Table
+
+![CI](https://github.com/MadiKaliyev/angular/actions/workflows/test.yml/badge.svg)
+
+Проект маршрутов с таблицей и сортировкой IP и строк.  
+...
+
 # RouteTable
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.2.
