@@ -24,3 +24,6 @@ jobs:
 
       - name: 🧪 Запустить тесты
         run: npm test -- --watch=false --browsers=ChromeHeadless
+
+      - name: 🐳 Собрать Docker-образ
+        run: docker build -t route-table-app .
