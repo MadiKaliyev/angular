@@ -1,0 +1,59 @@
+<div class="table-responsive">
+  <table class="table table-hover table-bordered align-middle text-center">
+    <thead class="table-light">
+      <tr>
+        <th (click)="sort('uuid')" class="sortable">
+          UUID
+          <i *ngIf="sortedBy === 'uuid'" class="bi" [ngClass]="{
+            'bi-caret-up-fill': sortDirection === 'asc',
+            'bi-caret-down-fill': sortDirection === 'desc'
+          }"></i>
+        </th>
+        <th (click)="sort('address')" class="sortable">
+          Адрес назначения
+          <i *ngIf="sortedBy === 'address'" class="bi" [ngClass]="{
+            'bi-caret-up-fill': sortDirection === 'asc',
+            'bi-caret-down-fill': sortDirection === 'desc'
+          }"></i>
+        </th>
+        <th (click)="sort('mask')" class="sortable">
+          Маска
+          <i *ngIf="sortedBy === 'mask'" class="bi" [ngClass]="{
+            'bi-caret-up-fill': sortDirection === 'asc',
+            'bi-caret-down-fill': sortDirection === 'desc'
+          }"></i>
+        </th>
+        <th (click)="sort('gateway')" class="sortable">
+          Шлюз
+          <i *ngIf="sortedBy === 'gateway'" class="bi" [ngClass]="{
+            'bi-caret-up-fill': sortDirection === 'asc',
+            'bi-caret-down-fill': sortDirection === 'desc'
+          }"></i>
+        </th>
+        <th (click)="sort('interface')" class="sortable">
+          Интерфейс
+          <i *ngIf="sortedBy === 'interface'" class="bi" [ngClass]="{
+            'bi-caret-up-fill': sortDirection === 'asc',
+            'bi-caret-down-fill': sortDirection === 'desc'
+          }"></i>
+        </th>
+      </tr>
+    </thead>
+    <!-- давай напишем readme и упакуем в докер и запишем на гитхаб 
+https://github.com/MadiKaliyev/angular -->
+    <tbody>
+      <tr *ngFor="let route of routes">
+        <td>{{ route.uuid }}</td>
+        <td>{{ route.address }}</td>
+        <td>{{ route.mask }}</td>
+        <td>{{ route.gateway }}</td>
+        <td>{{ route.interface }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="d-flex justify-content-end mb-3">
+  <button class="btn btn-outline-primary" (click)="exportToCSV()">
+    <i class="bi bi-download me-2"></i> Скачать CSV
+  </button>
+</div>
